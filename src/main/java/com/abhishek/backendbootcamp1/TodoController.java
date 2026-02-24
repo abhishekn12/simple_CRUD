@@ -2,13 +2,10 @@ package com.abhishek.backendbootcamp1;
 
 
 import com.abhishek.backendbootcamp1.service.TodoService;
-import jakarta.annotation.Nonnull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/todos")

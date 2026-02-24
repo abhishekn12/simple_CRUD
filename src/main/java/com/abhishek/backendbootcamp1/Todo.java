@@ -1,7 +1,11 @@
 package com.abhishek.backendbootcamp1;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class Todo {
 
@@ -15,11 +19,4 @@ public class Todo {
 
     public Todo(){}
 
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
-    public boolean isCompleted() { return completed; }
-
-    public void setId(Long id) { this.id = id; }
-    public void setTitle(String title) { this.title = title; }
-    public void setCompleted(boolean completed) { this.completed = completed; }
 }

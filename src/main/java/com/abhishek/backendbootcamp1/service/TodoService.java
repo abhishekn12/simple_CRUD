@@ -3,13 +3,9 @@ package com.abhishek.backendbootcamp1.service;
 import com.abhishek.backendbootcamp1.Todo;
 import com.abhishek.backendbootcamp1.exception.TodoNotFoundException;
 import com.abhishek.backendbootcamp1.repository.TodoRepository;
-import jakarta.annotation.Nonnull;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

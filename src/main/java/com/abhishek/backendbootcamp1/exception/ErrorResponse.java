@@ -1,12 +1,15 @@
 package com.abhishek.backendbootcamp1.exception;
 
+import lombok.Getter;
+
 import java.time.LocalDateTime;
 
+@Getter
 public class ErrorResponse {
 
-    private LocalDateTime timestamp;
-    private String message;
-    private int status;
+    private final LocalDateTime timestamp;
+    private final String message;
+    private final int status;
 
     public ErrorResponse(LocalDateTime timestamp, String message, int status) {
         this.timestamp = timestamp;
@@ -14,7 +17,4 @@ public class ErrorResponse {
         this.status = status;
     }
 
-    public LocalDateTime getTimestamp() { return timestamp; }
-    public String getMessage() { return message; }
-    public int getStatus() { return status; }
 }
