@@ -1,6 +1,7 @@
 package com.abhishek.backendbootcamp1.service;
 
 import com.abhishek.backendbootcamp1.Todo;
+import com.abhishek.backendbootcamp1.exception.TodoNotFoundException;
 import com.abhishek.backendbootcamp1.repository.TodoRepository;
 import jakarta.annotation.Nonnull;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,7 @@ public class TodoService {
             existing.setTitle(updatedTodo.getTitle());
             existing.setCompleted(updatedTodo.isCompleted());
             return todoRepository.save(existing);
-        }).orElseThrow(() -> new RuntimeException("Todo not found with id " + id));
+        }).orElseThrow(() -> new TodoNotFoundException("Todo not found with id " + id));
     }
 
     public void deleteTodo(Long id) {
