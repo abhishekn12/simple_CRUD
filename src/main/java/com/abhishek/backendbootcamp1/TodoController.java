@@ -2,6 +2,7 @@ package com.abhishek.backendbootcamp1;
 
 
 import com.abhishek.backendbootcamp1.service.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public Todo createTodo(@RequestBody Todo todo){
+    public Todo createTodo(@Valid @RequestBody Todo todo){
         return todoService.createTodo(todo);
     }
 
